@@ -1,0 +1,211 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+:root {
+  --fontSize: 16px;
+  --primaryFontFamily: Public Sans, sans-serif;
+  /*     --secondaryFontFamily: Source Sans Pro, georgia, helvetica, sans-serif; */
+  --marginRoot: 1rem;
+  --marginRootTwo: 2rem;
+  --lineHeightRoot: 1.5;
+  --levelTwo: calc(var(--fontScale) * var(--fontScale));
+  --levelThree: calc(var(--fontScale) * var(--fontScale) * var(--fontScale));
+  --levelFour: calc(
+    var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale)
+  );
+  --levelFive: calc(
+    var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale) *
+      var(--fontScale)
+  );
+  --levelSix: calc(
+    var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale) *
+      var(--fontScale) * var(--fontScale)
+  );
+  /*     SCHEME ONE - LIGHT BOOK */
+  --xsecondaryColor: #131312;
+  --xprimaryColor: #fbf6f2;
+  /*     SCHEME ONE DARK */
+  --xsecondaryColor: #fbf6f2;
+  --xprimaryColor: #131312;
+  /*     SCHEME TWO - GRAY */
+  --xsecondaryColor: #131313;
+  --xprimaryColor: #fefefe;
+  /*     SCHEME TWO DARK */
+  --xsecondaryColor: #fefefe;
+  --xprimaryColor: #131313;
+  /*     SCHEME THREE */
+  --xsecondaryColor: #102731;
+  --xprimaryColor: #e3e7e8;
+  /*     SCHEME THREE DARK */
+  --xsecondaryColor: #e3e7e8;
+  --xprimaryColor: #102731;
+  /*     SCHEME FOUR - BOOK */
+  --xsecondaryColor: #333333;
+  --xprimaryColor: #e5e0d4;
+  /*     SCHEME FOUR DARK */
+  --xsecondaryColor: #e5e0d4;
+  --xprimaryColor: #333333;
+  --secondaryColor: #f1eff7;
+  --primaryColor: #18161d;
+}
+
+html {
+  font-size: var(--fontSize);
+  font-family: var(--primaryFontFamily);
+  --fontScale: 1.125;
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+  html {
+    --fontScale: 1.2;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+.tinycopy {
+  font-family: var(--primaryFontFamily);
+}
+
+h1,
+.h1 {
+  font-size: calc(1rem * var(--levelSix));
+  margin: 0 0 var(--marginRoot);
+  font-weight: 400;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: calc(1rem * var(--levelFour));
+  margin: 0 0 calc(2 * var(--marginRoot));
+  font-weight: 400;
+  opacity: 0.9;
+  line-height: 1.2;
+  scroll-margin-top: 5rem;
+}
+
+h3,
+.h3 {
+  font-size: calc(1rem * var(--levelTwo));
+  margin: 0 0 var(--marginRoot);
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.3;
+  /*   text-transform:uppercase;
+  letter-spacing:.125rem; */
+}
+
+/* p ~ h3{
+  margin:3rem 0 var(--marginRoot);
+} */
+h3:not(:first-child) {
+  margin: 3rem 0 var(--marginRoot);
+}
+
+h4 {
+  font-size: calc(1rem * var(--levelTwo));
+  margin: 0 0 var(--marginRoot);
+  line-height: 1.4;
+}
+
+p {
+  font-size: calc(1rem * var(--fontScale));
+  margin: 0 0 var(--marginRoot);
+  line-height: var(--lineHeightRoot);
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+p.mwp {
+  max-width: 40rem;
+}
+
+li {
+  font-size: calc(1rem * var(--fontScale));
+  margin: 0 0 var(--marginRoot);
+  line-height: var(--lineHeightRoot);
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.tinycopy {
+  font-size: calc(1rem * (0.85 * var(--fontScale)));
+  margin: 0 0 calc(var(--marginRoot) / 1.5);
+}
+
+.main {
+  padding: 20vmin 5%;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.mws {
+  max-width: 45rem;
+}
+
+.welcomemat {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.iframe {
+  border: 1px solid;
+  width: 100%;
+  padding: 4rem 0;
+  margin: 2rem 0;
+}
+
+.about {
+  padding: 4rem 0%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.benefits {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  margin: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .benefits {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .benefit {
+    width: 30%;
+  }
+}
+
+.img53 {
+  background: var(--secondaryColor);
+  padding-top: 56.25%;
+  height: 0;
+}
